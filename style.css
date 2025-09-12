@@ -1,0 +1,56 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black; /* biar pinggiran di luar area tetap hitam */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bungkus utama agar homescreen/canvas ukurannya konsisten */
+.screen-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9; /* jaga rasio */
+  width: 80vw; /* atur scaling sesuai layar */
+  height: auto;
+  overflow: hidden;
+}
+
+#homeScreen,
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#homeScreen {
+  position: relative;
+}
+
+#homeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* isi penuh tanpa distorsi */
+  display: block;
+}
+
+#playBtn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%; /* relatif biar proporsional */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#playBtn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+#gameCanvas {
+  display: none; /* muncul setelah klik play */
+  background: black;
+}
