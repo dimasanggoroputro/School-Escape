@@ -24,17 +24,6 @@ Game ini menceritakan tentang seorang murid yang terjebak di sekolah misterius d
 
 ---
 
-## 📦 Cara Install & Mainkan
-1. Clone repository:
-   ```bash
-   git clone https://github.com/username/repo-name.git
-   ```
-2. Masuk ke folder project:
-   ```bash
-   cd repo-name
-   ```
-3. Buka file `index.html` di browser (Chrome/Edge/Firefox).
-4. Game langsung bisa dimainkan tanpa install tambahan.
 
 ---
 
