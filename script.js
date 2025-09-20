@@ -21,46 +21,6 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-// load background
-const bg = {
-  aula: new Image(),
-  lorong: new Image(),
-  kelas: new Image(),
-  ruangGuru: new Image(),
-  pintuKeluar: new Image(),
-};
-
-bg.aula.src = "assets/bg/aula.png";
-bg.lorong.src = "assets/bg/lorong.png";
-bg.kelas.src = "assets/bg/kelas.png";
-bg.ruangGuru.src = "assets/bg/ruang_guru.png";
-bg.pintuKeluar.src = "assets/bg/pintu_keluar.png";
-
-// load karakter
-const char = {
-  mc: new Image(),
-  mc2: new Image(),
-  guru: new Image(),
-  bayangan: new Image(),
-  kunti: new Image(),
-  penjaga: new Image(),
-};
-
-char.mc.src = "assets/char/mc.png";
-char.mc2.src = "assets/char/mc2.png";
-char.guru.src = "assets/char/guru.png";
-char.bayangan.src = "assets/char/bayangan_guru.png";
-char.kunti.src = "assets/char/kunti.png";
-char.penjaga.src = "assets/char/penjaga.png";
-
-// load sound
-const sounds = {
-  bgm: new Audio("assets/sound/bgm.mp3"),
-};
-
-sounds.bgm.loop = true;
-sounds.bgm.volume = 0.3;
-
 // kontrol start button
 document.getElementById("playBtn").addEventListener("click", () => {
   sounds.bgm.play(); // mulai BGM
@@ -144,6 +104,8 @@ function drawScene() {
           300,
           500
         );
+        sounds.creeks.currentTime = 0;
+        sounds.creeks.play();
         drawDialog(
           "“Krrrkkk… krrrkkk…” seperti kursi yang diseret pelan. \nTapi tidak ada siapa pun di sana.\n1. Masuk ke lorong \n2. Pergi ke ruang kelas sebelah"
         );
@@ -160,6 +122,7 @@ function drawScene() {
           300,
           500
         );
+        sounds.creeks.pause();
         drawDialog(
           "Lorong itu panjang dan sempit. Lampu neon di langit-langit \nberkedip-kedip, seakan bisa mati kapan saja. Bau lembap memenuhi udara."
         );
@@ -219,6 +182,7 @@ function drawScene() {
           300,
           500
         );
+        sounds.creeks.pause();
         drawDialog(
           " Kelas itu berantakan. Jendela pecah, kertas ujian berserakan di lantai, papan tulis \npenuh coretan samar: “Jangan percaya dia…"
         );
@@ -243,6 +207,8 @@ function drawScene() {
           300,
           500
         );
+        sounds.jump.currentTime = 0;
+        sounds.jump.play();
         ctx.drawImage(char.kunti, 50, canvas.height - 550, 300, 500);
         drawDialog(
           "Sesosok tubuh muncul—hantu dengan wajah pucat dan mata kosong, \nmerangkak dari jendela masuk ke kelas.\n1.Melawan dengan kursi \n2.Lari ke ruang guru"
