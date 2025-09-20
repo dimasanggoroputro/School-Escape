@@ -9,6 +9,7 @@ document.addEventListener("keydown", (e) => {
     if (e.key.toLowerCase() === "r") {
       stopAllSfx();
       stopBgm();
+      sounds.bgm.play(); // mulai BGM
       scene = "aula"; // mulai ulang
       step = 0;
       hideEndScreen();
