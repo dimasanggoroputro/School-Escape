@@ -24,9 +24,6 @@ Game ini menceritakan tentang seorang murid yang terjebak di sekolah misterius d
 
 ---
 
-
----
-
 ## 📁 Struktur Project
 ```
 📂 project-folder
@@ -51,7 +48,7 @@ Game ini menceritakan tentang seorang murid yang terjebak di sekolah misterius d
 ---
 
 ## 👨‍💻 Credits
-- **Developer:** Dim  
+- **Developer:** DimasAnggoro 
 - **Engine:** HTML5 Canvas + JavaScript  
 - **Asset:** Dibuat dengan bantuan AI  
 
